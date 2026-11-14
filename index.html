@@ -63,7 +63,14 @@ header {
   line-height: 1.2;
 }
 
-.brand span {
+  .brand-logo {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+  .brand span {
   display: block;
   color: white;
   font-size: 12px;
@@ -443,10 +450,9 @@ footer {
 
 <header>
   <div class="container navbar">
-    <a href="#home" class="brand">
-      OGOOLUWA'S
-      <span>SPOTLIGHT</span>
-    </a>
+  <a href="#home" class="brand">
+  <img src="logo.png.jfif" alt="OGOOLUWA'S SPOTLIGHT" class="brand-logo">
+</a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
