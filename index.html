@@ -2,1320 +2,1575 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ogooluwa's Spotlight is a creative and entrepreneurial brand offering book and song trailers, ebook services, book illustrations, cover design and digital creative solutions.">
-<meta name="theme-color" content="#101b35">
-<title>Ogooluwa's Spotlight | Creative Studio</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --navy: #101b35;
-  --navy-light: #1b2a4a;
-  --gold: #d6ad62;
-  --cream: #f8f5ee;
-  --white: #ffffff;
-  --text: #4c5361;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--text);
-  background: var(--white);
-  line-height: 1.7;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-  line-height: 1.2;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img, video {
-  max-width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(1140px, 90%);
-  margin: auto;
-}
-
-.section {
-  padding: 85px 0;
-}
-
-.section-label {
-  color: var(--gold);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.section-heading {
-  color: var(--navy);
-  font-size: clamp(32px, 5vw, 46px);
-  margin-bottom: 18px;
-}
-
-.section-intro {
-  max-width: 650px;
-  margin-bottom: 42px;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--navy);
-  padding: 13px 25px;
-  border-radius: 4px;
-  font-weight: 700;
-  transition: .3s;
-  border: 1px solid var(--gold);
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: transparent;
-  color: var(--gold);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--gold);
-}
-
-.btn-outline:hover {
-  background: var(--gold);
-  color: var(--navy);
-}
-
-/* NAVIGATION */
-
-header {
-  background: var(--navy);
-  color: var(--white);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 3px 15px rgba(0,0,0,.12);
-}
-
-.navbar {
-  min-height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.logo {
-  color: var(--gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.logo span {
-  display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 9px;
-  letter-spacing: 4px;
-  color: white;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-  list-style: none;
-}
-
-.nav-links a {
-  font-size: 13px;
-  font-weight: 600;
-  transition: .3s;
-}
-
-.nav-links a:hover {
-  color: var(--gold);
-}
-
-.menu-toggle {
-  display: none;
-  border: 0;
-  color: white;
-  background: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 620px;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(115deg, #0c172e, #263858);
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::after {
-  content: "✦";
-  position: absolute;
-  right: 9%;
-  top: 16%;
-  font-size: clamp(130px, 25vw, 310px);
-  color: rgba(214,173,98,.09);
-  pointer-events: none;
-}
-
-.hero-content {
-  max-width: 750px;
-  padding: 90px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-tag {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 22px;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 7vw, 72px);
-  margin-bottom: 25px;
-}
-
-.hero h1 span {
-  color: var(--gold);
-}
-
-.hero p {
-  max-width: 620px;
-  font-size: 17px;
-  color: #e0e4ec;
-  margin-bottom: 32px;
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-/* INTRODUCTION */
-
-.intro {
-  background: var(--cream);
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.intro-visual {
-  min-height: 370px;
-  background: var(--navy);
-  border: 9px solid #eee5d5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 35px;
-  color: var(--gold);
-}
-
-.intro-visual h3 {
-  font-size: 38px;
-}
-
-.intro-visual p {
-  color: white;
-  margin-top: 15px;
-}
-
-/* SERVICES */
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 23px;
-}
-
-.service-card {
-  padding: 32px 26px;
-  background: var(--cream);
-  border-bottom: 3px solid transparent;
-  transition: .3s;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
-}
-
-.service-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--gold);
-  display: grid;
-  place-items: center;
-  font-size: 23px;
-  margin-bottom: 22px;
-}
-
-.service-card h3 {
-  color: var(--navy);
-  font-size: 21px;
-  margin-bottom: 12px;
-}
-
-.service-card p {
-  font-size: 14px;
-}
-
-/* PORTFOLIO */
-
-.portfolio {
-  background: var(--navy);
-  color: white;
-}
-
-.portfolio .section-heading {
-  color: white;
-}
-
-.portfolio .section-intro {
-  color: #d3d9e5;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  align-items: start;
-}
-
-.portfolio-card {
-  background: var(--navy-light);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.08);
-}
-
-.portfolio-card img,
-.portfolio-card video {
-  width: 100%;
-  height: 245px;
-  object-fit: cover;
-  background: #263553;
-}
-
-.portfolio-card .cover-image {
-  height: 310px;
-  object-fit: contain;
-  background: #172541;
-  padding: 12px;
-}
-
-.portfolio-info {
-  padding: 22px;
-}
-
-.portfolio-info h3 {
-  color: var(--gold);
-  margin-bottom: 8px;
-  font-size: 21px;
-}
-
-.portfolio-info p {
-  color: #d3d9e5;
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-
-.portfolio-info .btn {
-  font-size: 13px;
-  padding: 10px 17px;
-}
-
-/* WHY CHOOSE US */
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 23px;
-}
-
-.why-item {
-  display: flex;
-  gap: 17px;
-  padding: 22px;
-  background: var(--cream);
-}
-
-.check {
-  color: var(--gold);
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.why-item h3 {
-  color: var(--navy);
-  margin-bottom: 7px;
-  font-size: 20px;
-}
-
-/* PROCESS */
-
-.process {
-  background: var(--cream);
-}
-
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.process-card {
-  text-align: center;
-  padding: 25px 15px;
-}
-
-.process-number {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--gold);
-  font-size: 22px;
-  font-weight: 700;
-  display: grid;
-  place-items: center;
-  margin: 0 auto 20px;
-}
-
-.process-card h3 {
-  color: var(--navy);
-  margin-bottom: 10px;
-}
-
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 55px;
-  align-items: center;
-}
-
-.founder-card {
-  min-height: 390px;
-  background: linear-gradient(145deg, var(--navy), #263858);
-  color: var(--gold);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 35px;
-  border: 8px solid #eee5d5;
-}
-
-.founder-card .symbol {
-  font-size: 65px;
-  margin-bottom: 15px;
-}
-
-.founder-card h3 {
-  font-size: 30px;
-  margin-bottom: 12px;
-}
-
-.founder-card p {
-  color: white;
-  font-size: 14px;
-}
-
-.about-copy p {
-  margin-bottom: 17px;
-}
-
-/* CTA */
-
-.cta {
-  background: linear-gradient(120deg, var(--navy), #263858);
-  color: white;
-  text-align: center;
-  padding: 85px 20px;
-}
-
-.cta h2 {
-  font-size: clamp(32px, 5vw, 45px);
-  margin-bottom: 18px;
-}
-
-.cta p {
-  max-width: 650px;
-  margin: 0 auto 28px;
-  color: #dce1eb;
-}
-
-/* FAQ */
-
-.faq-list {
-  max-width: 800px;
-}
-
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-}
-
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-  color: var(--navy);
-  font-size: 17px;
-  font-weight: 700;
-  cursor: pointer;
-  gap: 15px;
-}
-
-.faq-answer {
-  display: none;
-  padding-top: 15px;
-  font-size: 14px;
-}
-
-.faq-item.active .faq-answer {
-  display: block;
-}
-
-/* CONTACT */
-
-.contact {
-  background: var(--cream);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 40px;
-}
-
-.contact-details {
-  background: var(--navy);
-  color: white;
-  padding: 35px;
-}
-
-.contact-details h3 {
-  color: var(--gold);
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-
-.contact-details p {
-  margin-bottom: 18px;
-}
-
-.contact-form {
-  background: white;
-  padding: 35px;
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group label {
-  display: block;
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 13px;
-  margin-bottom: 7px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  font-family: inherit;
-  font-size: 14px;
-}
-
-.form-group textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
-/* FOOTER */
-
-footer {
-  background: #0a1225;
-  color: #d3d9e5;
-  padding: 55px 0 20px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-footer h3 {
-  color: var(--gold);
-  margin-bottom: 17px;
-  font-size: 23px;
-}
-
-footer h4 {
-  color: white;
-  margin-bottom: 15px;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer li {
-  margin-bottom: 9px;
-  font-size: 14px;
-}
-
-footer a:hover {
-  color: var(--gold);
-}
-
-.footer-bottom {
-  border-top: 1px solid #26314a;
-  padding-top: 20px;
-  text-align: center;
-  font-size: 12px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .nav-links {
-    gap: 14px;
-  }
-
-  .services-grid,
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .intro-grid,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 650px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 82px;
-    left: 0;
-    right: 0;
-    background: var(--navy);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 25px 5%;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    width: 100%;
-    padding: 7px 0;
-  }
-
-  .hero {
-    min-height: 560px;
-  }
-
-  .services-grid,
-  .portfolio-grid,
-  .why-grid,
-  .process-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 65px 0;
-  }
-
-  .hero h1 {
-    font-size: 43px;
-  }
-
-  .contact-form,
-  .contact-details {
-    padding: 25px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ogooluwa's Spotlight is a creative studio offering book cover design, book trailers, song trailers, ebook services, illustrations and creative storytelling.">
+  <meta name="theme-color" content="#101b35">
+
+  <title>OGOOLUWA'S SPOTLIGHT | Creative Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #101b35;
+      --navy-light: #1b2a4a;
+      --gold: #d6b46a;
+      --deep-gold: #b88a3b;
+      --cream: #f8f5ed;
+      --white: #ffffff;
+      --text: #4c5361;
+      --dark: #252b38;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1140px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-label {
+      color: var(--deep-gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-heading {
+      color: var(--navy);
+      font-size: clamp(32px, 5vw, 46px);
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin-bottom: 42px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 13px 25px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 18px rgba(0,0,0,.15);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      color: white;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 80% 25%, rgba(214,180,106,.17), transparent 30%),
+        linear-gradient(120deg, #0a1225, #101b35 60%, #263858);
+      color: white;
+    }
+
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      right: 9%;
+      top: 18%;
+      color: rgba(214,180,106,.16);
+      font-size: clamp(150px, 25vw, 330px);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 100px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag {
+      color: var(--gold);
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(43px, 7vw, 76px);
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: 17px;
+      color: #e0e4ec;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* INTRODUCTION */
+
+    .intro {
+      background: var(--cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-visual {
+      min-height: 390px;
+      background:
+        radial-gradient(circle at top right, rgba(214,180,106,.2), transparent 40%),
+        var(--navy);
+      border: 9px solid #eee5d5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      color: var(--gold);
+    }
+
+    .intro-visual h3 {
+      font-size: clamp(32px, 4vw, 43px);
+    }
+
+    .intro-visual p {
+      color: white;
+      margin-top: 15px;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+    }
+
+    .service-card {
+      padding: 35px 27px;
+      background: var(--cream);
+      border-bottom: 3px solid transparent;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 12px 30px rgba(16,27,53,.08);
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      margin-bottom: 23px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 13px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio {
+      background: var(--navy);
+      color: white;
+    }
+
+    .portfolio .section-heading {
+      color: white;
+    }
+
+    .portfolio .section-intro {
+      color: #d3d9e5;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .portfolio-card {
+      background: var(--navy-light);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 5px;
+      transition: .3s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.18);
+    }
+
+    .portfolio-card img,
+    .portfolio-card video {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: #263553;
+    }
+
+    .portfolio-card .cover-image {
+      height: 350px;
+      object-fit: contain;
+      padding: 12px;
+      background: var(--cream);
+    }
+
+    .portfolio-info {
+      padding: 24px;
+    }
+
+    .portfolio-category {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 9px;
+    }
+
+    .portfolio-info h3 {
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .portfolio-info p {
+      color: #d3d9e5;
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+    }
+
+    .portfolio-link:hover {
+      color: white;
+      border-color: white;
+    }
+
+    /* WHY CHOOSE US */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 17px;
+      padding: 24px;
+      background: var(--cream);
+    }
+
+    .check {
+      color: var(--deep-gold);
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .why-item h3 {
+      color: var(--navy);
+      margin-bottom: 7px;
+      font-size: 20px;
+    }
+
+    /* PROCESS */
+
+    .process {
+      background: var(--cream);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .process-number {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+    }
+
+    .process-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .founder-placeholder {
+      min-height: 400px;
+      background:
+        radial-gradient(circle at top right, rgba(214,180,106,.2), transparent 40%),
+        var(--navy);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 35px;
+      border: 8px solid var(--cream);
+    }
+
+    .founder-placeholder .symbol {
+      font-size: 65px;
+      margin-bottom: 15px;
+    }
+
+    .founder-placeholder h3 {
+      font-size: 30px;
+    }
+
+    .founder-placeholder p {
+      color: white;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    .about-copy p {
+      margin-bottom: 17px;
+    }
+
+    /* CALL TO ACTION */
+
+    .cta {
+      background: linear-gradient(120deg, var(--navy), #263858);
+      color: white;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 45px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #dce1eb;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 800px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      gap: 15px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 15px;
+      font-size: 14px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 35px;
+    }
+
+    .contact-details {
+      background: var(--navy);
+      color: white;
+      padding: 35px;
+    }
+
+    .contact-details h3 {
+      color: var(--gold);
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .contact-details p {
+      margin-bottom: 18px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details a {
+      color: var(--gold);
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 35px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-family: inherit;
+      font-size: 14px;
+      background: white;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: 2px solid var(--gold);
+      border-color: var(--gold);
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0a1225;
+      color: #d3d9e5;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    footer h3 {
+      color: var(--gold);
+      margin-bottom: 17px;
+      font-size: 23px;
+    }
+
+    footer h4 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 9px;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #26314a;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .navbar {
+        min-height: 75px;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 5%;
+        gap: 5px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+        padding: 8px 0;
+      }
+
+      .hero {
+        min-height: 570px;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .services-grid,
+      .portfolio-grid,
+      .why-grid,
+      .process-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .portfolio-card img,
+      .portfolio-card video {
+        height: 240px;
+      }
+
+      .portfolio-card .cover-image {
+        height: 330px;
+      }
+
+      .contact-form,
+      .contact-details {
+        padding: 25px;
+      }
+
+      .intro-visual {
+        min-height: 300px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="container navbar">
-    <a href="#home" class="logo">
-      Ogooluwa's Spotlight
-      <span>Creative Studio</span>
-    </a>
+  <!-- NAVIGATION -->
+  <header>
+    <div class="container navbar">
 
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Open navigation" aria-expanded="false">☰</button>
+      <a href="#home" class="logo">
+        OGOOLUWA'S SPOTLIGHT
+        <span>Creative Studio</span>
+      </a>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#process">How It Works</a></li>
-      <li><a href="#faq">FAQs</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</header>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        ☰
+      </button>
 
-<main>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-tag">Creativity • Storytelling • Entrepreneurship</div>
-      <h1>Every Idea Deserves Its <span>Spotlight.</span></h1>
-      <p>
-        Welcome to Ogooluwa's Spotlight, a creative and entrepreneurial
-        brand turning ideas into meaningful experiences through storytelling,
-        digital creativity, thoughtful design and innovative solutions.
-      </p>
-      <div class="hero-buttons">
-        <a href="#services" class="btn">Explore Our Services</a>
-        <a href="#contact" class="btn btn-outline">Let's Create Together</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INTRO -->
-<section class="section intro">
-  <div class="container intro-grid">
-    <div>
-      <div class="section-label">Welcome to our creative world</div>
-      <h2 class="section-heading">Where Ideas Become Experiences</h2>
-      <p>
-        At Ogooluwa's Spotlight, we believe creativity is more than
-        making something look beautiful. It is about communicating ideas,
-        capturing emotions and creating experiences people remember.
-      </p>
-      <br>
-      <p>
-        From book and song promotions to ebook support, illustrations,
-        cover designs and digital content, we help creators and businesses
-        present their ideas with confidence and originality.
-      </p>
-      <br>
-      <a href="#about" class="btn">Discover Our Story</a>
-    </div>
-
-    <div class="intro-visual">
-      <div>
-        <h3>Imagine It.<br>Create It.<br>Spotlight It.</h3>
-        <p>Creativity with purpose and personality.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section" id="services">
-  <div class="container">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-heading">Creative Services Designed to Inspire</h2>
-    <p class="section-intro">
-      We bring together visual creativity, storytelling and digital
-      presentation to help authors, musicians, entrepreneurs and creators
-      share their work with the world.
-    </p>
-
-    <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-icon">♫</div>
-        <h3>Song Trailers</h3>
-        <p>
-          Creative music promotional videos designed to capture the mood
-          of your song, build anticipation and connect with your audience.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">▶</div>
-        <h3>Book Trailers</h3>
-        <p>
-          Engaging visual previews that introduce your book's atmosphere,
-          characters and story while encouraging readers to discover more.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">▤</div>
-        <h3>eBook Services</h3>
-        <p>
-          Creative support for ebook projects, including formatting,
-          presentation, layout assistance and preparation for digital readers.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">✎</div>
-        <h3>Book Illustrations</h3>
-        <p>
-          Visual storytelling and illustration support that helps bring
-          written ideas, characters and imaginative worlds to life.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">✧</div>
-        <h3>Book Cover Design</h3>
-        <p>
-          Thoughtful cover concepts that reflect your book's identity,
-          attract attention and create a memorable first impression.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">◈</div>
-        <h3>Creative Content Support</h3>
-        <p>
-          Promotional materials and digital content that help individuals,
-          entrepreneurs and brands communicate their ideas effectively.
-        </p>
-      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- PORTFOLIO -->
-<section class="section portfolio" id="portfolio">
-  <div class="container">
-    <div class="section-label">Our Creative Showcase</div>
-    <h2 class="section-heading">A Spotlight on Creativity</h2>
-    <p class="section-intro">
-      Explore selected creative projects and discover how ideas can
-      become compelling visual experiences.
-    </p>
+  <main>
 
-    <div class="portfolio-grid">
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
 
-      <div class="portfolio-card">
-        <video controls preload="metadata">
-          <source src="portfolio/JUST%20FOR%20THE%20PLOT%20SONG%20(1).mp4" type="video/mp4">
-          Your browser does not support video playback.
-        </video>
-        <div class="portfolio-info">
-          <h3>Just for the Plot</h3>
-          <p>Song trailer and music promotion project.</p>
+          <div class="hero-tag">
+            Creativity • Storytelling • Imagination
+          </div>
+
+          <h1>
+            Every Story Deserves Its
+            <span>Spotlight.</span>
+          </h1>
+
+          <p>
+            Welcome to Ogooluwa's Spotlight, a creative brand bringing
+            ideas, books, music and stories to life through thoughtful
+            design, engaging visuals and creative storytelling.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#services" class="btn">Explore Our Services</a>
+            <a href="#contact" class="btn btn-outline">Let's Create Together</a>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-card">
-        <video controls preload="metadata">
-          <source src="portfolio/GOODNIGHT%2C%20FOREST%20BOOK%20TRAILER%20(1).mp4" type="video/mp4">
-          Your browser does not support video playback.
-        </video>
-        <div class="portfolio-info">
-          <h3>Goodnight, Forest</h3>
-          <p>Book trailer and visual storytelling project.</p>
-        </div>
-      </div>
+    <!-- INTRODUCTION -->
+    <section class="section intro">
+      <div class="container intro-grid">
 
-      <div class="portfolio-card">
-        <a href="portfolio/BOOK%20COVER%20DESIGN.jpg" target="_blank" rel="noopener noreferrer">
-          <img
-            class="cover-image"
-            src="portfolio/BOOK%20COVER%20DESIGN.jpg"
-            alt="Book cover design portfolio project">
-        </a>
-        <div class="portfolio-info">
-          <h3>Book Cover Design</h3>
-          <p>A selected example of creative book cover presentation and visual design.</p>
-          <a href="portfolio/BOOK%20COVER%20DESIGN.jpg"
-             target="_blank" rel="noopener noreferrer" class="btn">
-            View Cover
-          </a>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="portfolio-info">
-          <h3>The Girl Who Painted the Wind</h3>
-          <p>A creative book project available to view as a PDF.</p>
-          <a href="portfolio/THE%20GIRL%20WHO%20PAINTED%20THE%20WIND%20%5B3Dpixer%5D%20-.pdf"
-             target="_blank" rel="noopener noreferrer" class="btn">
-            View Project
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">The Ogooluwa's Spotlight Difference</div>
-    <h2 class="section-heading">Why Work With Us?</h2>
-    <p class="section-intro">
-      Every creative project deserves attention, intention and a clear
-      understanding of the idea behind it.
-    </p>
-
-    <div class="why-grid">
-
-      <div class="why-item">
-        <div class="check">✦</div>
         <div>
-          <h3>Creative Thinking</h3>
-          <p>We approach every project with fresh ideas and an eye for detail.</p>
+          <div class="section-label">Welcome to Our Creative World</div>
+
+          <h2 class="section-heading">
+            Where Ideas Become Experiences
+          </h2>
+
+          <p>
+            At Ogooluwa's Spotlight, we believe creativity is more than
+            making something look beautiful. It is about communicating
+            ideas, capturing emotions and creating experiences people remember.
+          </p>
+
+          <br>
+
+          <p>
+            From book trailers and song promotions to ebook support,
+            illustrations and cover designs, we help creators present
+            their work with confidence and originality.
+          </p>
+
+          <br>
+
+          <a href="#about" class="btn">Discover Our Story</a>
         </div>
-      </div>
 
-      <div class="why-item">
-        <div class="check">✦</div>
-        <div>
-          <h3>Story-Driven Approach</h3>
-          <p>We focus on the message and emotion behind every creative work.</p>
+        <div class="intro-visual">
+          <div>
+            <h3>Imagine It.<br>Create It.<br>Spotlight It.</h3>
+            <p>Creativity with purpose and personality.</p>
+          </div>
         </div>
+
       </div>
+    </section>
 
-      <div class="why-item">
-        <div class="check">✦</div>
-        <div>
-          <h3>Attention to Detail</h3>
-          <p>We value thoughtful presentation and consistency throughout the process.</p>
-        </div>
-      </div>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
 
-      <div class="why-item">
-        <div class="check">✦</div>
-        <div>
-          <h3>Collaborative Experience</h3>
-          <p>Your ideas matter. We work with you to bring your vision to life.</p>
-        </div>
-      </div>
+        <div class="section-label">What We Do</div>
 
-    </div>
-  </div>
-</section>
+        <h2 class="section-heading">
+          Creative Services Designed to Inspire
+        </h2>
 
-<!-- PROCESS -->
-<section class="section process" id="process">
-  <div class="container">
-    <div class="section-label">Our Approach</div>
-    <h2 class="section-heading">How It Works</h2>
-    <p class="section-intro">
-      We keep the creative process simple, collaborative and focused on
-      bringing your ideas to life.
-    </p>
-
-    <div class="process-grid">
-
-      <div class="process-card">
-        <div class="process-number">01</div>
-        <h3>Share Your Idea</h3>
-        <p>Tell us about your project, goals and creative vision.</p>
-      </div>
-
-      <div class="process-card">
-        <div class="process-number">02</div>
-        <h3>Plan the Concept</h3>
-        <p>We discuss the direction, style and details of your project.</p>
-      </div>
-
-      <div class="process-card">
-        <div class="process-number">03</div>
-        <h3>Create Together</h3>
-        <p>We develop your project and keep communication open.</p>
-      </div>
-
-      <div class="process-card">
-        <div class="process-number">04</div>
-        <h3>Reveal Your Work</h3>
-        <p>Your completed creative project is ready to take its spotlight.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="container about-grid">
-
-    <div class="founder-card">
-      <div class="symbol">✦</div>
-      <h3>Ogooluwa's Spotlight</h3>
-      <p>Creative Vision • Entrepreneurship • Purpose</p>
-    </div>
-
-    <div class="about-copy">
-      <div class="section-label">The Person Behind the Spotlight</div>
-      <h2 class="section-heading">Creativity, Entrepreneurship & Purpose</h2>
-
-      <p>
-        Ogooluwa's Spotlight is built on a passion for creativity,
-        entrepreneurship and the power of storytelling.
-      </p>
-
-      <p>
-        As an entrepreneur, I believe in identifying ideas, developing
-        creative solutions and turning possibilities into meaningful work.
-        My goal is to help authors, musicians and other creators present
-        their projects in ways that capture attention and communicate
-        their unique identities.
-      </p>
-
-      <p>
-        What started as a love for creative expression represents a growing
-        vision: a creative space where stories are celebrated, ideas are
-        developed and every project receives the attention it deserves.
-      </p>
-
-      <p>
-        Through Ogooluwa's Spotlight, I look forward to collaborating
-        with people who have something meaningful to share with the world.
-      </p>
-
-      <a href="#contact" class="btn">Connect With Us</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <div class="section-label">Your Vision, Our Creativity</div>
-    <h2>Ready to Give Your Idea Its Spotlight?</h2>
-    <p>
-      Whether you're an author preparing to launch a book, a musician
-      promoting a new song or an entrepreneur developing a new idea,
-      we'd love to hear from you.
-    </p>
-    <a href="#contact" class="btn">Start Your Creative Project</a>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section-label">Frequently Asked Questions</div>
-    <h2 class="section-heading">Questions You May Have</h2>
-
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          What services does Ogooluwa's Spotlight offer?
-          <span>+</span>
-        </button>
-        <div class="faq-answer">
-          We offer song trailers, book trailers, ebook services,
-          book illustrations, book cover design and creative content support.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Can I request a custom creative project?
-          <span>+</span>
-        </button>
-        <div class="faq-answer">
-          Yes. You can contact us with your idea and project requirements
-          so we can discuss a creative direction that suits your needs.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Do you work with authors, musicians and entrepreneurs?
-          <span>+</span>
-        </button>
-        <div class="faq-answer">
-          Yes. Our creative services are designed to support authors,
-          musicians, entrepreneurs and other individuals with ideas to share.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          How do I get started?
-          <span>+</span>
-        </button>
-        <div class="faq-answer">
-          Simply use the contact section to tell us about your project.
-          We'll discuss your requirements and the next steps.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          Can I see examples of previous work?
-          <span>+</span>
-        </button>
-        <div class="faq-answer">
-          Yes. Visit our portfolio section to explore selected creative projects.
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-  <div class="container">
-    <div class="section-label">Let's Connect</div>
-    <h2 class="section-heading">Tell Us About Your Project</h2>
-    <p class="section-intro">
-      Have an idea, a story or a creative project in mind?
-      Reach out and let's explore what we can create together.
-    </p>
-
-    <div class="contact-grid">
-
-      <div class="contact-details">
-        <h3>Ogooluwa's Spotlight</h3>
-        <p>✦ Creative storytelling and digital presentation.</p>
-        <p>✦ Creative services for authors, musicians and entrepreneurs.</p>
-        <p>✦ Open to collaborations and custom projects.</p>
-        <p>
-          We welcome enquiries from individuals, businesses and creative
-          professionals looking to bring their ideas to life.
+        <p class="section-intro">
+          We bring together visual creativity, storytelling and digital
+          presentation to help authors, musicians, entrepreneurs and
+          creators share their work with the world.
         </p>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <div class="service-icon">♫</div>
+            <h3>Song Trailers</h3>
+            <p>
+              Creative music promotional videos designed to capture the
+              mood of your song, build anticipation and connect with your audience.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">▶</div>
+            <h3>Book Trailers</h3>
+            <p>
+              Engaging visual previews that introduce your book's atmosphere,
+              characters and story while encouraging readers to discover more.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">▤</div>
+            <h3>eBook Services</h3>
+            <p>
+              Creative support for ebook projects, including formatting,
+              presentation, layout assistance and preparation for digital readers.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">✎</div>
+            <h3>Book Illustrations</h3>
+            <p>
+              Visual storytelling and illustration support that helps bring
+              written ideas, characters and imaginative worlds to life.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>Book Cover Design</h3>
+            <p>
+              Thoughtful cover concepts that reflect your book's identity,
+              attract attention and create a memorable first impression.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">◈</div>
+            <h3>Creative Content Support</h3>
+            <p>
+              Creative promotional materials and digital content that help
+              individuals and brands communicate their ideas effectively.
+            </p>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <form class="contact-form" id="contactForm">
+    <!-- PORTFOLIO -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
 
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name"
-                 placeholder="Enter your name" required>
-        </div>
+        <div class="section-label">Our Creative Showcase</div>
 
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email"
-                 placeholder="Enter your email" required>
-        </div>
+        <h2 class="section-heading">A Spotlight on Creativity</h2>
 
-        <div class="form-group">
-          <label for="service">What Service Are You Interested In?</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option>Song Trailer</option>
-            <option>Book Trailer</option>
-            <option>eBook Services</option>
-            <option>Book Illustration</option>
-            <option>Book Cover Design</option>
-            <option>Creative Content Support</option>
-            <option>Business or Brand Project</option>
-            <option>Other Creative Project</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Tell Us About Your Project</label>
-          <textarea id="message" name="message"
-                    placeholder="Describe your idea or project..."
-                    required></textarea>
-        </div>
-
-        <button type="submit" class="btn">Send Your Enquiry</button>
-
-      </form>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div>
-        <h3>Ogooluwa's Spotlight</h3>
-        <p>
-          A creative and entrepreneurial space for stories, music,
-          books and ideas. We bring imagination and purpose together
-          to create meaningful experiences.
+        <p class="section-intro">
+          Explore selected creative projects and discover how ideas can
+          become compelling visual experiences.
         </p>
+
+        <div class="portfolio-grid">
+
+          <!-- BOOK COVER DESIGN -->
+          <article class="portfolio-card">
+
+            <a
+              href="portfolio/BOOK%20COVER%20DESIGN.jpg"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="portfolio/BOOK%20COVER%20DESIGN.jpg"
+                alt="Book cover design by Ogooluwa's Spotlight"
+                class="cover-image"
+                loading="lazy">
+            </a>
+
+            <div class="portfolio-info">
+              <div class="portfolio-category">BOOK COVER DESIGN</div>
+
+              <h3>Creative Book Cover Design</h3>
+
+              <p>
+                A book cover design showcasing visual presentation,
+                imagination and attention to detail.
+              </p>
+
+              <a
+                href="portfolio/BOOK%20COVER%20DESIGN.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="portfolio-link">
+                VIEW COVER
+              </a>
+            </div>
+
+          </article>
+
+          <!-- SONG TRAILER -->
+          <article class="portfolio-card">
+
+            <video controls preload="metadata">
+              <source
+                src="portfolio/JUST%20FOR%20THE%20PLOT%20SONG%20(1).mp4"
+                type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+
+            <div class="portfolio-info">
+              <div class="portfolio-category">MUSIC PROMOTION</div>
+
+              <h3>Just for the Plot</h3>
+
+              <p>
+                An original music project presented through creative
+                visual storytelling and promotional video.
+              </p>
+            </div>
+
+          </article>
+
+          <!-- BOOK TRAILER -->
+          <article class="portfolio-card">
+
+            <video controls preload="metadata">
+              <source
+                src="portfolio/GOODNIGHT%2C%20FOREST%20BOOK%20TRAILER%20(1).mp4"
+                type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+
+            <div class="portfolio-info">
+              <div class="portfolio-category">BOOK TRAILER</div>
+
+              <h3>Goodnight, Forest</h3>
+
+              <p>
+                A book trailer project designed to introduce a story
+                through engaging visuals and creative presentation.
+              </p>
+            </div>
+
+          </article>
+
+          <!-- BOOK PROJECT -->
+          <article class="portfolio-card">
+
+            <a
+              href="portfolio/THE%20GIRL%20WHO%20PAINTED%20THE%20WIND%20%5B3Dpixer%5D%20-.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <div class="founder-placeholder" style="min-height:280px; border:0;">
+                <div>
+                  <div style="font-size:55px;">✦</div>
+                  <h3 style="font-size:25px;">The Girl Who Painted the Wind</h3>
+                  <p>A creative book project</p>
+                </div>
+              </div>
+
+            </a>
+
+            <div class="portfolio-info">
+              <div class="portfolio-category">BOOK PROJECT</div>
+
+              <h3>The Girl Who Painted the Wind</h3>
+
+              <p>
+                Explore this creative book project and its imaginative
+                storytelling.
+              </p>
+
+              <a
+                href="portfolio/THE%20GIRL%20WHO%20PAINTED%20THE%20WIND%20%5B3Dpixer%5D%20-.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="portfolio-link">
+                VIEW PROJECT
+              </a>
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-label">The Ogooluwa's Spotlight Difference</div>
+
+        <h2 class="section-heading">Why Work With Us?</h2>
+
+        <p class="section-intro">
+          Every creative project deserves attention, intention and a clear
+          understanding of the story behind it.
+        </p>
+
+        <div class="why-grid">
+
+          <div class="why-item">
+            <div class="check">✦</div>
+            <div>
+              <h3>Creative Thinking</h3>
+              <p>
+                We approach every project with fresh ideas and an eye for detail.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✦</div>
+            <div>
+              <h3>Story-Driven Approach</h3>
+              <p>
+                We focus on the message and emotion behind every creative work.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✦</div>
+            <div>
+              <h3>Attention to Detail</h3>
+              <p>
+                We value thoughtful presentation and consistency throughout the process.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✦</div>
+            <div>
+              <h3>Collaborative Experience</h3>
+              <p>
+                Your ideas matter. We work with you to bring your vision to life.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section process" id="process">
+      <div class="container">
+
+        <div class="section-label">Our Approach</div>
+
+        <h2 class="section-heading">How It Works</h2>
+
+        <p class="section-intro">
+          We keep the creative process simple, collaborative and focused
+          on bringing your ideas to life.
+        </p>
+
+        <div class="process-grid">
+
+          <div class="process-card">
+            <div class="process-number">01</div>
+            <h3>Share Your Idea</h3>
+            <p>Tell us about your project, goals and creative vision.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">02</div>
+            <h3>Plan the Concept</h3>
+            <p>We discuss the direction, style and details of your project.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">03</div>
+            <h3>Create Together</h3>
+            <p>We develop your project and keep communication open.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">04</div>
+            <h3>Reveal Your Work</h3>
+            <p>Your completed creative project is ready to take its spotlight.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="founder-placeholder">
+          <div>
+            <div class="symbol">✦</div>
+            <h3>OGOOLUWA'S SPOTLIGHT</h3>
+            <p>Creativity • Entrepreneurship • Purpose</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+
+          <div class="section-label">The Person Behind the Spotlight</div>
+
+          <h2 class="section-heading">
+            Creativity, Entrepreneurship & Purpose
+          </h2>
+
+          <p>
+            Ogooluwa's Spotlight is built on a passion for creativity,
+            entrepreneurship and the power of storytelling.
+          </p>
+
+          <p>
+            As an entrepreneur, I believe in identifying ideas, developing
+            creative solutions and turning possibilities into meaningful work.
+            My goal is to help authors, musicians and other creators present
+            their projects in ways that capture attention and communicate
+            their unique identities.
+          </p>
+
+          <p>
+            What started as a love for creative expression represents a
+            growing vision: a creative space where stories are celebrated,
+            ideas are developed and every project receives the attention it deserves.
+          </p>
+
+          <p>
+            Through Ogooluwa's Spotlight, I look forward to collaborating
+            with people who have something meaningful to share with the world.
+          </p>
+
+          <a href="#contact" class="btn">Connect With Us</a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+      <div class="container">
+
+        <div class="section-label">Your Vision, Our Creativity</div>
+
+        <h2>Ready to Give Your Idea Its Spotlight?</h2>
+
+        <p>
+          Whether you're an author preparing to launch a book, a musician
+          promoting a new song or a creator developing a new idea,
+          we'd love to hear from you.
+        </p>
+
+        <a href="#contact" class="btn">Start Your Creative Project</a>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+
+        <div class="section-label">Frequently Asked Questions</div>
+
+        <h2 class="section-heading">Questions You May Have</h2>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What services does Ogooluwa's Spotlight offer?
+              <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+              We offer song trailers, book trailers, ebook services,
+              book illustrations, book cover design and creative content support.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I request a custom creative project?
+              <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+              Yes. You can contact us with your idea and project requirements
+              so we can discuss a creative direction that suits your needs.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do you work with authors and musicians?
+              <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+              Yes. Our services are designed to support authors, musicians,
+              entrepreneurs and other creators.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How do I get started?
+              <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+              Simply use the contact section to tell us about your project.
+              We'll discuss your requirements and the next steps.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can I see examples of previous work?
+              <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+              Yes. Visit our portfolio section to explore selected creative projects.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container">
+
+        <div class="section-label">Let's Connect</div>
+
+        <h2 class="section-heading">Tell Us About Your Project</h2>
+
+        <p class="section-intro">
+          Have an idea, a story or a creative project in mind?
+          Reach out and let's explore what we can create together.
+        </p>
+
+        <div class="contact-grid">
+
+          <div class="contact-details">
+
+            <h3>Ogooluwa's Spotlight</h3>
+
+            <p>✦ Creative storytelling and digital presentation.</p>
+
+            <p>
+              ✉ Email:
+              <a href="mailto:ogooluwaspotlight@gmail.com">
+                ogooluwaspotlight@gmail.com
+              </a>
+            </p>
+
+            <p>🌐 Website: Ogooluwa's Spotlight</p>
+
+            <p>
+              We welcome enquiries from authors, musicians,
+              entrepreneurs and creative individuals.
+            </p>
+
+          </div>
+
+          <form class="contact-form" id="contactForm">
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label for="service">What Service Are You Interested In?</label>
+
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Song Trailer</option>
+                <option>Book Trailer</option>
+                <option>eBook Services</option>
+                <option>Book Illustration</option>
+                <option>Book Cover Design</option>
+                <option>Creative Content Support</option>
+                <option>Other Creative Project</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project</label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Describe your idea or project..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn">
+              Send Your Enquiry
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <h3>Ogooluwa's Spotlight</h3>
+
+          <p>
+            A creative space for stories, music, books and ideas.
+            We bring imagination and purpose together to create
+            meaningful creative experiences.
+          </p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Our Services</h4>
+
+          <ul>
+            <li>Song Trailers</li>
+            <li>Book Trailers</li>
+            <li>eBook Services</li>
+            <li>Book Illustrations</li>
+            <li>Book Cover Design</li>
+          </ul>
+        </div>
+
       </div>
 
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Our Services</h4>
-        <ul>
-          <li>Song Trailers</li>
-          <li>Book Trailers</li>
-          <li>eBook Services</li>
-          <li>Book Illustrations</li>
-          <li>Book Cover Design</li>
-          <li>Creative Content Support</li>
-        </ul>
+      <div class="footer-bottom">
+        © <span id="year"></span> Ogooluwa's Spotlight. All Rights Reserved.
       </div>
 
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      © <span id="year"></span> Ogooluwa's Spotlight. All Rights Reserved.
-    </div>
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
-  </div>
-</footer>
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('show');
 
-<script>
-// CONTACT SETTINGS
-// Add your real business email between the quotation marks.
-// Example: const CONTACT_EMAIL = "you@example.com";
-const CONTACT_EMAIL = "";
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
 
-// Mobile navigation
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      });
+    });
 
-menuToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('show');
-  menuToggle.setAttribute('aria-expanded', isOpen);
-  menuToggle.textContent = isOpen ? '×' : '☰';
-});
+    // FAQ ACCORDION
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isOpen = item.classList.toggle('active');
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('show');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.textContent = '☰';
-  });
-});
+        button.setAttribute('aria-expanded', isOpen);
+        button.querySelector('span').textContent = isOpen ? '−' : '+';
+      });
+    });
 
-// FAQ accordion
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const item = button.closest('.faq-item');
-    const isOpen = item.classList.toggle('active');
+    // CONTACT FORM
+    // Opens the visitor's email application with the enquiry filled in.
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
 
-    button.setAttribute('aria-expanded', isOpen);
-    button.querySelector('span').textContent = isOpen ? '−' : '+';
-  });
-});
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
 
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+      const recipient = 'ogooluwaspotlight@gmail.com';
 
-  if (!CONTACT_EMAIL.trim()) {
-    alert('The contact form is not connected yet. Please add your business email in the CONTACT SETTINGS section of the code.');
-    return;
-  }
+      const subject = encodeURIComponent(
+        'New project enquiry from ' + name
+      );
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const service = document.getElementById('service').value;
-  const message = document.getElementById('message').value.trim();
+      const body = encodeURIComponent(
+        'Name: ' + name +
+        '\nEmail: ' + email +
+        '\nService: ' + service +
+        '\n\nProject details:\n' + message
+      );
 
-  const subject = encodeURIComponent('New project enquiry from ' + name);
+      window.location.href =
+        'mailto:' + recipient +
+        '?subject=' + subject +
+        '&body=' + body;
+    });
 
-  const body = encodeURIComponent(
-    'Name: ' + name +
-    '\nEmail: ' + email +
-    '\nService: ' + service +
-    '\n\nProject details:\n' + message
-  );
-
-  window.location.href =
-    'mailto:' + CONTACT_EMAIL +
-    '?subject=' + subject +
-    '&body=' + body;
-});
-
-// Automatic copyright year
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    // AUTOMATIC COPYRIGHT YEAR
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
